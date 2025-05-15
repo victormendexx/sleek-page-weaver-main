@@ -1,47 +1,48 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { cn } from "@/lib/utils";
-
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const navLinks = [
-    { name: "Sobre", href: "#about" },
-    { name: "Soluções", href: "#solutions" },
-    { name: "Benefícios", href: "#benefits" },
-    { name: "Contato", href: "#contact" },
-    { name: "Cadastre-se", href: "#register" },
+    { name: "Sobre", href: "#about", weight: "bold" },
+    { name: "Soluções", href: "#solutions", weight: "normal" },
+    { name: "Benefícios", href: "#benefits", weight: "normal" },
+    { name: "Contato", href: "#contact", weight: "normal" },
+    { name: "Cadastre-se", href: "#register", weight: "normal" },
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md py-3">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md py-3 h-32 flex items-center justify-between">
       <div className="container-custom flex justify-between items-center">
         {/* Logo */}
-        <div className="flex-shrink-0">
-          <a
-            href="#"
-            className="text-2xl font-bold text-nextil-blue flex items-center"
-          >
-            <span className="text-nextil-blue font-bold">nextil</span>
-          </a>
+        <div className="">
+          <img src="../../public/logo.svg" alt="" width={120} />
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8 border-solid border-2 border-[#080846] p-2 px-4 rounded-[3rem] justify-around">
-          {navLinks.slice(0, 4).map((link) => (
-            <a key={link.name} href={link.href} className="nav-link">
+        <nav className="hidden lg:flex items-center space-x-8 border-solid border-2 border-[#080846] py-[.3rem]   rounded-[3rem] justify-around md:w-[45rem] lg:w-[45.25rem]">
+          {navLinks.slice(0, 5).map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className={`nav-link text-sm text-[#080846] hover:text-[#40489E] ${
+                link.name === "Cadastre-se"
+                  ? "bg-[#e7e7e7] hover:bg-[#eeeeee] px-[1rem] py-[.2rem] rounded-full md:text-xs"
+                  : " md:pl-1 lg:pl-12 pr-0"
+              }  font-${link.weight}`}
+            >
               {link.name}
             </a>
           ))}
         </nav>
 
         {/* Login Button (Desktop) */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block ">
           <a
             href="#login"
-            className="px-4 py-2 rounded-md bg-nextil-blue text-white hover:bg-nextil-blue/90 transition-colors"
+            className="lg:px-8 lg:p-2.5 md:px-4 md:p-2 rounded-full bg-[#080846] border-2 border-[#080846] text-white hover:bg-[#40489E]  hover:border-[#40489E] transition-colors text-sm font-thin hover:font-normal"
           >
             Login
           </a>
@@ -49,7 +50,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-nextil-navy"
+          className="lg:hidden text-nextil-navy"
           onClick={toggleMenu}
           aria-label="Toggle Menu"
         >
@@ -59,7 +60,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t">
+        <div className="lg:hidden bg-white border-t w-full">
           <div className="container-custom py-4 flex flex-col space-y-4">
             {navLinks.map((link) => (
               <a

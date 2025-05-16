@@ -29,7 +29,7 @@ const Navbar = () => {
               href={link.href}
               className={`nav-link text-sm text-[#080846] hover:text-[#40489E] ${
                 link.name === "Cadastre-se"
-                  ? "bg-[#e7e7e7] hover:bg-[#eeeeee] px-[1rem] py-[.2rem] rounded-full md:text-xs"
+                  ? "bg-[#e7e7e7] hover:bg-[#eeeeee] px-[1rem] py-[.2rem] rounded-full md:text-normal"
                   : " md:pl-1 lg:pl-12 pr-0"
               }  font-${link.weight}`}
             >

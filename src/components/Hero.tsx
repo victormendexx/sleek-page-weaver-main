@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import SignupButton from "./ui/signup-button";
 
 const Hero = () => {
   return (
@@ -25,17 +26,7 @@ const Hero = () => {
             <span className="block font-extrabold mt-2">sua loja.</span>
           </h1>
 
-          <div className="py-2 pl-6  border-solid border-2 border-white rounded-full w-[12rem] ">
-            <a
-              href="#register"
-              className="w-full flex justify-center items-center"
-            >
-              Cadastre-se
-              <div className="bg-white w-8 h-8 rounded-full flex items-center justify-center ml-6  ">
-                <ArrowRight className="-rotate-45 text-[#080846]" size={20} />
-              </div>
-            </a>
-          </div>
+          <SignupButton />
         </div>
 
         <div

@@ -1,22 +1,4 @@
 const Features = () => {
-  const stats = [
-    {
-      title: "1bi",
-      prefix: "R$",
-      description: "em compras de lojistas como você até 2026",
-    },
-    {
-      title: "1mil",
-      prefix: "+",
-      description: "novos negócios concluídos ao mês",
-    },
-    {
-      title: "80%",
-      prefix: "",
-      description: "de redução no tempo de compra e reposição",
-    },
-  ];
-
   const featureItems = [
     {
       title: "Simples",
@@ -41,8 +23,8 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-20 bg-white w-[75%]" id="features">
-      <div className="container-custom  ">
+    <section className="py-20 w-[80%]" id="features">
+      <div className="">
         <div className="flex items-center justify-center w-full">
           {/* Features Items */}
           <div className="w-2/4 gap-8 mb-16 flex flex-col ">

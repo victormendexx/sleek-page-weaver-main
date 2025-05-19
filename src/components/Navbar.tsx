@@ -14,7 +14,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white py-3 h-32 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#E6E6E6] py-3 h-32 flex items-center justify-between">
       <div className="container-custom flex justify-between items-center">
         {/* Logo */}
         <div className="">

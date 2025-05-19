@@ -4,7 +4,7 @@ import SignupButton from "./ui/signup-button";
 const Hero = () => {
   return (
     <section
-      className="relative text-white min-h-screen flex items-center  justify-center "
+      className="relative text-white min-h-screen flex items-center  justify-center bg-[url(../../image-about.png)] bg-no-repeat bg-cover bg-center rounded-[2rem] w-[90%] h-[40rem] mt-[8rem] px-[5rem]"
       id="hero"
     >
       {/* <img
@@ -13,7 +13,7 @@ const Hero = () => {
         className="hidden lg:block pt-[8rem] self-center absolute top-[1rem]"
       /> */}
 
-      <div className="container-custom z-10 grid md:grid-cols-2 gap-8 items-center bottom-32 bg-[url(../../image-about.png)] bg-no-repeat bg-cover bg-center rounded-[2rem] w-[80rem] h-[40rem] mt-[8rem] px-[5rem]">
+      <div className="container-custom z-10 grid md:grid-cols-2 gap-8 items-center bottom-32 ">
         <div
           className="space-y-6 animate-fadeIn"
           style={{ animationDelay: "0.2s" }}

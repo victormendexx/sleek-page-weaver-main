@@ -2,9 +2,15 @@ import { ArrowRight } from "lucide-react";
 
 import React from "react";
 
-const SignupButton: React.FC = () => {
+type SignupButtonProps = {
+  extraClasses?: string;
+};
+
+const SignupButton: React.FC<SignupButtonProps> = ({ extraClasses }) => {
   return (
-    <div className="py-2 pl-6  border-solid border-2 border-white rounded-full w-[12rem] hover:scale-105 transition-all duration-300">
+    <div
+      className={`py-2 pl-6  border-solid border-2 border-white rounded-full w-[12rem] transition-all duration-300 z-50 absolute ${extraClasses}`}
+    >
       <a href="#register" className="w-full flex justify-center items-center">
         Cadastre-se
         <div className="bg-white w-8 h-8 rounded-full flex items-center justify-center ml-6  ">

@@ -1,4 +1,3 @@
-
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { CheckCircle } from "lucide-react";
 
@@ -7,63 +6,128 @@ const Advantages = () => {
     {
       icon: <CheckCircle className="text-nextil-blue h-6 w-6" />,
       title: "Prático e inteligente",
-      description: "Uma forma mais prática e inteligente de comprar."
+      description: "Uma forma mais prática e inteligente de comprar.",
     },
     {
       icon: <CheckCircle className="text-nextil-blue h-6 w-6" />,
       title: "Estoque atualizado",
-      description: "Disponibilidade e preços em tempo real."
+      description: "Disponibilidade e preços em tempo real.",
     },
     {
       icon: <CheckCircle className="text-nextil-blue h-6 w-6" />,
       title: "Compra simplificada",
-      description: "Processo otimizado para eficiência."
+      description: "Processo otimizado para eficiência.",
     },
     {
       icon: <CheckCircle className="text-nextil-blue h-6 w-6" />,
       title: "Logística integrada",
-      description: "Entrega rápida sem problemas."
-    }
+      description: "Entrega rápida sem problemas.",
+    },
   ];
 
   return (
-    <section className="py-16 bg-white" id="advantages">
-      <div className="container-custom">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-nextil-blue mb-4">
-            Sua loja merece uma forma mais <span className="text-blue-400">prática</span> e <span className="text-green-400">inteligente</span> de comprar
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Nossa plataforma oferece todas as ferramentas necessárias para otimizar suas compras
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Left side with advantages */}
-          <div className="grid grid-cols-1 gap-6">
-            {advantages.map((advantage, index) => (
-              <div key={index} className="flex items-start p-4 rounded-lg">
-                <div className="mr-4 mt-1">
-                  {advantage.icon}
-                </div>
-                <div>
-                  <h3 className="font-semibold text-xl mb-1">{advantage.title}</h3>
-                  <p className="text-gray-600">{advantage.description}</p>
-                </div>
-              </div>
-            ))}
+    <section
+      className="my-16 py-16 rounded-[2rem] bg-white w-[90%]"
+      id="advantages"
+    >
+      <div className="container-custom flex text-[#080846] gap-10 leading-7 my-6">
+        <div className=" flex flex-col  justify-center gap-10 ml-10">
+          <div className="text-[3rem] font-bold leading-none ">
+            Sua loja merece
+            <br /> uma forma mais
+            <br /> <span className="text-[#00CFFF]">prática e inteligente</span>
+            <br /> de comprar.
           </div>
-
-          {/* Right side with image */}
-          <div className="rounded-lg overflow-hidden">
-            <AspectRatio ratio={16/9} className="bg-nextil-gray">
-              <div className="h-full w-full flex items-center justify-center">
-                <div className="text-center p-6 bg-gradient-to-br from-nextil-blue to-blue-400 rounded-lg text-white shadow-lg">
-                  <h3 className="text-xl font-bold mb-2">Interface de usuário intuitiva</h3>
-                  <p>Plataforma desenvolvida para facilitar suas compras</p>
+          <div className="leading-5">
+            A{" "}
+            <span className="font-bold ">
+              Nextil conecta você diretamente às marcas,
+            </span>{" "}
+            <br /> agilizando as compras para a sua loja de moda.
+            <br /> Somos uma solução inovadora, pensada para facilitar <br />a
+            jornada do lojista na gestão de pedidos multimarcas.
+          </div>
+        </div>
+        <div className="flex gap-8 w-/4">
+          <div className="flex flex-col gap-8">
+            <div className="flex gap-4">
+              <img
+                src="../../public/marcas.png"
+                alt=""
+                width={48}
+                height={48}
+                className="w-12 h-12 object-contain"
+              />
+              <div className="flex flex-col gap-4 text-[1.5rem] font-bold">
+                Encontre as marcas <br />
+                ideais para sua loja{" "}
+                <span className="text-[1rem] font-normal leading-5">
+                  Veja lançamentos e novidades em um
+                  <br /> só lugar, com uma apresentação clara
+                  <br /> e fácil de navegar.
+                </span>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <img
+                src="../../public/conexoes.png"
+                alt=""
+                width={48}
+                height={48}
+                className="w-12 h-12 object-contain"
+              />
+              <div className="flex flex-col gap-4 text-[1.5rem] font-bold">
+                Interaja em
+                <br />
+                tempo real{" "}
+                <span className="text-[1rem] font-normal leading-5">
+                  Fale com as marcas em tempo real por
+                  <br /> comentários e mensagens para tirar
+                  <br /> todas as suas dúvidas.
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col gap-8">
+            <div className="flex gap-4">
+              <img
+                src="../../public/link.png"
+                alt=""
+                width={48}
+                height={48}
+                className="w-12 h-12 object-contain"
+              />
+              <div className="flex flex-col gap-4 text-[1.5rem] font-bold">
+                Conecte-se diretamente <br /> com fornecedores
+                <span className="text-[1rem] font-normal leading-5">
+                  Peça direto da plataforma, sem
+                  <br /> depender de agendas, catálogos
+                  <br />
+                  confusos ou múltiplos canais.
+                </span>
+              </div>
+            </div>
+            <div>
+              <div className="flex gap-4">
+                <img
+                  src="../../public/sacola.png"
+                  alt=""
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 object-contain"
+                />
+                <div className="flex flex-col gap-4 text-[1.5rem] font-bold">
+                  Organize e controle <br />
+                  seus pedidos
+                  <span className="text-[1rem] font-normal leading-5">
+                    Centralize suas compras, veja seu
+                    <br /> histórico e mantenha seu mix
+                    <br />
+                    sempre equilibrado em um só lugar.
+                  </span>
                 </div>
               </div>
-            </AspectRatio>
+            </div>
           </div>
         </div>
       </div>

@@ -1,57 +1,119 @@
+import { useState } from "react";
+import { ArrowRight, Minus } from "lucide-react";
+import { cn } from "@/lib/utils";
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+type FAQItem = {
+  id: string;
+  number: string;
+  question: string;
+  answer: string | null;
+};
+
+const faqData: FAQItem[] = [
+  {
+    id: "1",
+    number: "01",
+    question: "O que a Nextil faz?",
+    answer: null,
+  },
+  {
+    id: "2",
+    number: "02",
+    question: "Como a Nextil faz?",
+    answer: `A Nextil é voltada ao setor de moda e entrega uma ferramenta inovadora e eficiente, simplificando a jornada de compra e venda, conectando marcas e lojistas de maneira rápida, segura e moderna.`,
+  },
+  {
+    id: "3",
+    number: "03",
+    question: "Por que a Nextil faz?",
+    answer: null,
+  },
+  {
+    id: "4",
+    number: "04",
+    question: "Como faço meu cadastro?",
+    answer: null,
+  },
+];
 
 const FAQ = () => {
-  const faqItems = [
-    {
-      question: "O que é Nextil B2B?",
-      answer: "Nextil B2B é uma plataforma que conecta lojistas e marcas para uma experiência de compra mais eficiente e estratégica, permitindo que você compre das marcas mais desejadas sem sair da sua loja."
-    },
-    {
-      question: "Como a Nextil faz?",
-      answer: "Através de nossa plataforma digital, integramos o processo de compra entre lojistas e marcas, oferecendo uma interface intuitiva para visualizar produtos, gerenciar pedidos e acompanhar entregas em tempo real."
-    },
-    {
-      question: "Por que a Nextil faz?",
-      answer: "Nossa missão é simplificar o processo de compra B2B no setor de varejo, reduzindo tempo, custos operacionais e erros, enquanto fornecemos ferramentas estratégicas para melhores decisões de negócio."
-    },
-    {
-      question: "Como fazer meu cadastro?",
-      answer: "O cadastro na Nextil é simples e rápido. Basta acessar nossa página de registro, preencher suas informações de loja ou marca, validar seus dados e começar a usar nossa plataforma imediatamente."
-    }
-  ];
+  const [openItem, setOpenItem] = useState<string | null>(null);
+
+  const toggleItem = (id: string) => {
+    setOpenItem(openItem === id ? null : id);
+  };
 
   return (
-    <section className="py-20 bg-white" id="faq">
-      <div className="container-custom">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-nextil-blue mb-4">Perguntas Frequentes</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Tire suas principais dúvidas sobre a Nextil
-          </p>
-        </div>
+    <div className="w-full max-w-[90%] mx-auto mt-20 px-4 sm:px-6 text-[#080846]">
+      <h2 className="text-2xl md:text-3xl font-bold mb-6">
+        Perguntas frequentes
+      </h2>
 
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="w-full">
-            {faqItems.map((item, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-lg font-medium text-left">
+      <div className="flex flex-col">
+        {faqData.map((item) => (
+          <div key={item.id} className="border-t border-[#080846]">
+            <div
+              onClick={() => toggleItem(item.id)}
+              className="py-6 cursor-pointer flex justify-between items-center group"
+            >
+              <div className="flex items-center gap-4 sm:gap-6">
+                <span
+                  className={cn(
+                    "text-gray-500 text-lg md:text-xl font-extrabold",
+                    openItem === item.id ? "text-[#080846]" : ""
+                  )}
+                >
+                  {item.number}
+                </span>
+                <h3
+                  className={cn(
+                    "text-gray-500 text-lg md:text-xl font-semibold",
+                    openItem === item.id ? "text-[#080846]" : ""
+                  )}
+                >
                   {item.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-gray-600">
-                  {item.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
+                </h3>
+              </div>
+              <div
+                className={cn(
+                  "transition-transform duration-300",
+                  openItem === item.id ? "rotate-180" : ""
+                )}
+              >
+                {openItem === item.id ? (
+                  <Minus
+                    className={cn(
+                      "h-6 w-6 text-gray-500",
+                      openItem === item.id ? "text-[#080846]" : ""
+                    )}
+                  />
+                ) : (
+                  <ArrowRight
+                    className={cn(
+                      "h-6 w-6 text-gray-500 rotate-45",
+                      openItem === item.id ? "text-[#080846]" : ""
+                    )}
+                  />
+                )}
+              </div>
+            </div>
+
+            {item.answer && (
+              <div
+                className={cn(
+                  "transition-all duration-300 overflow-hidden text-sm sm:text-base",
+                  openItem === item.id ? "max-h-80 pb-6" : "max-h-0"
+                )}
+              >
+                <div className="px-4 sm:px-8">{item.answer}</div>
+              </div>
+            )}
+          </div>
+        ))}
+
+        <div className="border-t border-[#080846]"></div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -1,76 +1,68 @@
-
 import { Play } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const LiveFeature = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-cyan-500 to-blue-500 text-white" id="live">
-      <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Compre durante lives de lançamento</h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            Participe de eventos exclusivos e aproveite condições especiais em tempo real
-          </p>
+    <>
+      <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-center bg-gradient-to-r from-[#00CFFF] via-[#363BB4] to-[#080846] bg-clip-text text-transparent mt-[46rem] mb-8 px-4">
+        Compre durante lives de lançamento.
+      </h1>
+
+      <section
+        className="py-20 bg-gradient-to-r from-[#00CFFF] via-[#363BB4] to-[#080846] w-full max-w-[90%] mx-auto rounded-[2rem] min-h-[30rem] md:min-h-[35rem] lg:min-h-[40rem]"
+        id="live"
+      ></section>
+
+      <div className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-center gap-8 md:gap-12 mb-16 mt-12 px-4">
+        <div className="flex items-center gap-4 text-base md:text-lg font-bold text-[#080846]">
+          <img
+            src="../../public/chat.png"
+            alt="Interaja ao vivo"
+            className="w-10 h-10"
+          />
+          Interaja ao vivo
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Live demo placeholder */}
-          <div className="rounded-lg overflow-hidden shadow-xl">
-            <AspectRatio ratio={16/9}>
-              <div className="bg-nextil-navy/20 h-full w-full flex items-center justify-center">
-                <div className="rounded-full bg-white/20 p-6 backdrop-blur-sm">
-                  <Play className="h-16 w-16 text-white" />
-                </div>
-              </div>
-            </AspectRatio>
-          </div>
+        <div className="flex items-center gap-4 text-base md:text-lg font-bold text-[#080846]">
+          <img
+            src="../../public/coracao.png"
+            alt="Favorite peças"
+            className="w-10 h-10"
+          />
+          Favorite peças
+        </div>
 
-          {/* Live features */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-3">Experiência Imersiva</h3>
-              <p className="text-white/80">
-                Conecte-se diretamente com as marcas em apresentações ao vivo de produtos e coleções
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold mb-3">Acesso Exclusivo</h3>
-              <p className="text-white/80">
-                Seja o primeiro a conhecer as novidades e garanta produtos em alta demanda
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold mb-3">Condições Especiais</h3>
-              <p className="text-white/80">
-                Aproveite promoções relâmpago e descontos exclusivos durante os eventos ao vivo
-              </p>
-            </div>
-
-            <div className="pt-4">
-              <a href="#" className="inline-flex items-center bg-white text-nextil-blue px-6 py-3 rounded-full font-medium transition-all hover:bg-opacity-90">
-                Cadastre-se para próximos eventos
-                <svg className="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
+        <div className="flex items-center gap-4 text-base md:text-lg font-bold text-[#080846]">
+          <img
+            src="../../public/pedidos.png"
+            alt="Compre sem sair da live"
+            className="w-10 h-10"
+          />
+          <div className="leading-tight">
+            Compre sem <br className="hidden sm:block" /> sair da live
           </div>
         </div>
 
-        {/* Brand logos/partners */}
-        <div className="mt-20 pt-10 border-t border-white/20">
-          <div className="flex flex-wrap justify-center gap-8 items-center">
-            {[1, 2, 3, 4, 5].map((item) => (
-              <div key={item} className="h-12 w-12 bg-white/10 rounded-full flex items-center justify-center">
-                <span className="text-sm font-medium text-white/70">Logo</span>
-              </div>
-            ))}
+        <div className="flex items-center gap-4 text-base md:text-lg font-bold text-[#080846]">
+          <img
+            src="../../public/ticket.png"
+            alt="Descontos especiais"
+            className="w-10 h-10"
+          />
+          <div className="leading-tight">
+            Garanta descontos <br className="hidden sm:block" /> especiais
           </div>
         </div>
       </div>
-    </section>
+
+      <div className="w-full px-4">
+        <img
+          src="../../public/lives.png"
+          alt="Apresentação de lives"
+          className="w-full h-auto object-cover rounded-lg"
+        />
+      </div>
+    </>
   );
 };
 

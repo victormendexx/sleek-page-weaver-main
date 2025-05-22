@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 const CallToAction = () => {
   return (
     <section className="py-20 bg-nextil-blue text-white" id="register">
-      <div className="container-custom">
+      {/* <div className="container-custom">
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             IT'S A MATCH!
@@ -17,7 +17,7 @@ const CallToAction = () => {
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
           </a>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

@@ -7,6 +7,7 @@ import LiveFeature from "@/components/LiveFeature";
 import FAQ from "@/components/FAQ";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
+import Mobile from "@/components/Mobile";
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
       <LiveFeature />
       <FAQ />
       <CallToAction />
+      <Mobile />
       <Footer />
     </div>
   );

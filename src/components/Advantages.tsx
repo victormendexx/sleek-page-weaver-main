@@ -1,137 +1,147 @@
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { CheckCircle } from "lucide-react";
+import { IphoneClipPath } from "./ui/iphone-clip-path";
+import { LikeClipPath } from "./ui/like-clip-path";
+import SignupButton from "./ui/signup-button";
 
 const Advantages = () => {
-  const advantages = [
-    {
-      icon: <CheckCircle className="text-nextil-blue h-6 w-6" />,
-      title: "Prático e inteligente",
-      description: "Uma forma mais prática e inteligente de comprar.",
-    },
-    {
-      icon: <CheckCircle className="text-nextil-blue h-6 w-6" />,
-      title: "Estoque atualizado",
-      description: "Disponibilidade e preços em tempo real.",
-    },
-    {
-      icon: <CheckCircle className="text-nextil-blue h-6 w-6" />,
-      title: "Compra simplificada",
-      description: "Processo otimizado para eficiência.",
-    },
-    {
-      icon: <CheckCircle className="text-nextil-blue h-6 w-6" />,
-      title: "Logística integrada",
-      description: "Entrega rápida sem problemas.",
-    },
-  ];
-
   return (
-    <section
-      className="my-16 py-16 rounded-[2rem] bg-white w-[90%]"
-      id="advantages"
-    >
-      <div className="container-custom flex text-[#080846] gap-10 leading-7 my-6">
-        <div className=" flex flex-col  justify-center gap-10 ml-10">
-          <div className="text-[3rem] font-bold leading-none ">
-            Sua loja merece
-            <br /> uma forma mais
-            <br /> <span className="text-[#00CFFF]">prática e inteligente</span>
-            <br /> de comprar.
+    <>
+      <section
+        className="my-16 py-16 rounded-2xl bg-white w-full max-w-[90%] mx-auto"
+        id="advantages"
+      >
+        <div className="container-custom flex flex-col lg:flex-row text-[#080846] gap-12 px-4 md:px-10">
+          {/* Texto principal */}
+          <div className="flex flex-col justify-center gap-6 w-full lg:w-1/2">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+              Sua loja merece
+              <br /> uma forma mais <br />
+              <span className="text-[#00CFFF]">prática e inteligente</span>
+              <br /> de comprar.
+            </h2>
+
+            <p className="text-sm md:text-base leading-relaxed">
+              A{" "}
+              <span className="font-bold">
+                Nextil conecta você diretamente às marcas,
+              </span>{" "}
+              agilizando as compras para a sua loja de moda.
+              <br />
+              Somos uma solução inovadora, pensada para facilitar a jornada do
+              lojista na gestão de pedidos multimarcas.
+            </p>
           </div>
-          <div className="leading-5">
-            A{" "}
-            <span className="font-bold ">
-              Nextil conecta você diretamente às marcas,
-            </span>{" "}
-            <br /> agilizando as compras para a sua loja de moda.
-            <br /> Somos uma solução inovadora, pensada para facilitar <br />a
-            jornada do lojista na gestão de pedidos multimarcas.
-          </div>
-        </div>
-        <div className="flex gap-8 w-/4">
-          <div className="flex flex-col gap-8">
+
+          {/* Cards de vantagens */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full lg:w-1/2">
+            {/* Card 1 */}
             <div className="flex gap-4">
               <img
                 src="../../public/marcas.png"
                 alt=""
-                width={48}
-                height={48}
-                className="w-12 h-12 object-contain"
+                className="w-10 h-10 object-contain"
               />
-              <div className="flex flex-col gap-4 text-[1.5rem] font-bold">
-                Encontre as marcas <br />
-                ideais para sua loja{" "}
-                <span className="text-[1rem] font-normal leading-5">
-                  Veja lançamentos e novidades em um
-                  <br /> só lugar, com uma apresentação clara
-                  <br /> e fácil de navegar.
-                </span>
+              <div className="flex flex-col gap-2">
+                <h3 className="text-lg font-bold">
+                  Encontre as marcas <br />
+                  ideais para sua loja
+                </h3>
+                <p className="text-sm leading-snug">
+                  Veja lançamentos e novidades em um só lugar, com uma
+                  apresentação clara e fácil de navegar.
+                </p>
               </div>
             </div>
+
+            {/* Card 2 */}
             <div className="flex gap-4">
               <img
                 src="../../public/conexoes.png"
                 alt=""
-                width={48}
-                height={48}
-                className="w-12 h-12 object-contain"
+                className="w-10 h-10 object-contain"
               />
-              <div className="flex flex-col gap-4 text-[1.5rem] font-bold">
-                Interaja em
-                <br />
-                tempo real{" "}
-                <span className="text-[1rem] font-normal leading-5">
-                  Fale com as marcas em tempo real por
-                  <br /> comentários e mensagens para tirar
-                  <br /> todas as suas dúvidas.
-                </span>
+              <div className="flex flex-col gap-2">
+                <h3 className="text-lg font-bold">Interaja em tempo real</h3>
+                <p className="text-sm leading-snug">
+                  Fale com as marcas em tempo real por comentários e mensagens
+                  para tirar todas as suas dúvidas.
+                </p>
               </div>
             </div>
-          </div>
-          <div className="flex flex-col gap-8">
+
+            {/* Card 3 */}
             <div className="flex gap-4">
               <img
                 src="../../public/link.png"
                 alt=""
-                width={48}
-                height={48}
-                className="w-12 h-12 object-contain"
+                className="w-10 h-10 object-contain"
               />
-              <div className="flex flex-col gap-4 text-[1.5rem] font-bold">
-                Conecte-se diretamente <br /> com fornecedores
-                <span className="text-[1rem] font-normal leading-5">
-                  Peça direto da plataforma, sem
-                  <br /> depender de agendas, catálogos
-                  <br />
+              <div className="flex flex-col gap-2">
+                <h3 className="text-lg font-bold">
+                  Conecte-se diretamente com fornecedores
+                </h3>
+                <p className="text-sm leading-snug">
+                  Peça direto da plataforma, sem depender de agendas, catálogos
                   confusos ou múltiplos canais.
-                </span>
+                </p>
               </div>
             </div>
-            <div>
-              <div className="flex gap-4">
-                <img
-                  src="../../public/sacola.png"
-                  alt=""
-                  width={48}
-                  height={48}
-                  className="w-12 h-12 object-contain"
-                />
-                <div className="flex flex-col gap-4 text-[1.5rem] font-bold">
-                  Organize e controle <br />
-                  seus pedidos
-                  <span className="text-[1rem] font-normal leading-5">
-                    Centralize suas compras, veja seu
-                    <br /> histórico e mantenha seu mix
-                    <br />
-                    sempre equilibrado em um só lugar.
-                  </span>
-                </div>
+
+            {/* Card 4 */}
+            <div className="flex gap-4">
+              <img
+                src="../../public/sacola.png"
+                alt=""
+                className="w-10 h-10 object-contain"
+              />
+              <div className="flex flex-col gap-2">
+                <h3 className="text-lg font-bold">
+                  Organize e controle seus pedidos
+                </h3>
+                <p className="text-sm leading-snug">
+                  Centralize suas compras, veja seu histórico e mantenha seu mix
+                  sempre equilibrado em um só lugar.
+                </p>
               </div>
             </div>
           </div>
         </div>
+      </section>
+      <div className="flex items-end gap-8">
+        <LikeClipPath />
+        <IphoneClipPath />
+        <div className="flex flex-col gap-8">
+          <div className="bg-[url(../../iphone-nextil.png)] bg-no-repeat bg-cover bg-center rounded-[2rem] h-[18rem]"></div>
+
+          <div
+            style={{ clipPath: "url(#like-clip-path)" }}
+            className="bg-[#080846] w-full md:w-[37rem] h-auto lg:h-[18rem] p-8 sm:p-12 flex flex-col text-white gap-3 "
+          >
+            <h3 className="leading-8">
+              Curta, comente e<br /> salve seus favoritos.
+            </h3>
+            <span className="text-sm font-extralight leading-4">
+              Navegue exatamente como nas redes sociais enquanto abastece
+              <br /> seu estoque. A Nextil é o único social commerce do Brasil.
+              Nele,
+              <br /> você encontra os produtos ideias para seu mix.
+            </span>
+          </div>
+        </div>
+        <div
+          style={{ clipPath: "url(#iphone-clip-path)" }}
+          className="bg-[#00CFFF] w-full md:w-[37rem] h-auto lg:h-[38rem] p-8 sm:p-12 flex flex-col"
+        ></div>
+        <SignupButton extraClasses="ml-[30.4rem] h-20 w-[15rem] flex justify-center bg-[#363BB4] border-[#363BB4] text-white cursor-pointer" />
       </div>
-    </section>
+      {/* Imagem final responsiva */}
+      <div className="w-full px-4 absolute mb-[40rem] ">
+        <img
+          src="../../public/lojista.png"
+          alt=""
+          className="w-full h-auto object-cover"
+        />
+      </div>
+    </>
   );
 };
 

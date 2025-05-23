@@ -9,7 +9,7 @@ type SignupButtonProps = {
 const SignupButton: React.FC<SignupButtonProps> = ({ extraClasses }) => {
   return (
     <div
-      className={`py-2 pl-6  border-solid border-2 border-white rounded-full w-[12rem] transition-all duration-300 absolute ${extraClasses}`}
+      className={`py-2 pl-6  border-solid border-2 border-white rounded-full w-[12rem] transition-all duration-300 ${extraClasses}`}
     >
       <a href="#register" className="w-full flex justify-center items-center">
         Cadastre-se

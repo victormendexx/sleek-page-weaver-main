@@ -9,7 +9,7 @@ const Advantages = () => {
         className="my-16 py-16 rounded-2xl bg-white w-full max-w-[90%] mx-auto"
         id="advantages"
       >
-        <div className="container-custom flex flex-col lg:flex-row text-[#080846] gap-12 px-4 md:px-10">
+        <div className="container-custom flex flex-col lg:flex-row text-[#080846] gap-12 px-4 md:px-10 w-[90%] ">
           {/* Texto principal */}
           <div className="flex flex-col justify-center gap-6 w-full lg:w-1/2">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
@@ -106,16 +106,13 @@ const Advantages = () => {
           </div>
         </div>
       </section>
-      <div className="flex items-end gap-8">
+      <div className="flex items-end gap-8 w-[95%]">
         <LikeClipPath />
         <IphoneClipPath />
-        <div className="flex flex-col gap-8">
-          <div className="bg-[url(../../iphone-nextil.png)] bg-no-repeat bg-cover bg-center rounded-[2rem] h-[18rem]"></div>
+        <div className="flex flex-col gap-8 w-full">
+          <div className="bg-[url(../../iphone-nextil.png)] bg-no-repeat bg-cover bg-center rounded-[2rem] h-[18rem] w-[100%%]"></div>
 
-          <div
-            style={{ clipPath: "url(#like-clip-path)" }}
-            className="bg-[#080846] w-full md:w-[37rem] h-auto lg:h-[18rem] p-8 sm:p-12 flex flex-col text-white gap-3 "
-          >
+          <div className="bg-[#080846] w-full md:w-[100%] h-auto lg:h-[18rem] p-8 sm:p-12 flex flex-col text-white gap-3 inverted-three">
             <h3 className="leading-8">
               Curta, comente e<br /> salve seus favoritos.
             </h3>
@@ -127,20 +124,11 @@ const Advantages = () => {
             </span>
           </div>
         </div>
-        <div
-          style={{ clipPath: "url(#iphone-clip-path)" }}
-          className="bg-[#00CFFF] w-full md:w-[37rem] h-auto lg:h-[38rem] p-8 sm:p-12 flex flex-col"
-        ></div>
-        <SignupButton extraClasses="ml-[30.4rem] h-20 w-[15rem] flex justify-center bg-[#363BB4] border-[#363BB4] text-white cursor-pointer" />
+        <div className="bg-[#00CFFF] w-full md:w-[100%] h-auto lg:h-[38rem] p-8 sm:p-12 flex flex-col inverted-two"></div>
+        <SignupButton extraClasses=" absolute right-10 mt-[33rem] left-0 m-auto self-center flex justify-center bg-[#363BB4] border-[#363BB4] text-white cursor-pointer w-[20%] h-20" />
       </div>
       {/* Imagem final responsiva */}
-      <div className="w-full px-4 absolute mb-[40rem] ">
-        <img
-          src="../../public/lojista.png"
-          alt=""
-          className="w-full h-auto object-cover"
-        />
-      </div>
+      <img src="../../public/lojista.png" alt="" className="  object-cover" />
     </>
   );
 };

@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-full max-w-[90%] mx-auto px-4 sm:px-6 md:px-12 py-16"
+      className="w-full max-w-[95%] mx-auto px-4 sm:px-6 md:px-12 py-16"
     >
       <ClipPath />
 
@@ -36,7 +36,7 @@ const About = () => {
         </div>
 
         {/* Imagem */}
-        <div className="relative md:w-[49rem] h-64 sm:h-80 md:h-[27rem] bg-[url(../../match.png)] bg-no-repeat bg-cover bg-center rounded-2xl"></div>
+        <div className="relative md:w-[70%] h-64 sm:h-80 md:h-[27rem] bg-[url(../../match.png)] bg-no-repeat bg-cover bg-center rounded-2xl"></div>
 
         {/* Botão visível somente em telas grandes */}
         <div className="hidden lg:block absolute mt-[18.7rem] ml-[10.2rem] z-0">
